@@ -21,7 +21,7 @@
 - See example_input for format example
 4. An accession number of the RefSeq organism must be specified with `--accession`
 - ex. NC_006273.2
-5.  K-mer size to use in SPAdes assembly must be specified with `--kmer-size`
+5. K-mer size to use in SPAdes assembly must be specified with `--kmer-size`
 6. The organism to align assembly with blast+ must be specified with `--organism`
 
 The following must be installed prior to pipeline running: Biopython, Kallisto, Sleuth, Bowtie2, SPAdes, Blast, and Argparse
@@ -41,7 +41,7 @@ Example: `bash ~/biopython_pipeline/scripts/00wrapper.sh --working-dir ~/ --inpu
 #### Sample test data
 Sample data fastq files are included within the sample_data folder with an output log file to test the pipeline and compare output. To run:
 
-`bash {/path/to/00wrapper.sh} --working-dir {/path/output} --input {path/to/biopython_pipeline/input_file} --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae --no-wget --reads-dir {path/to/biopython_pipeline/sample_data}`
+`bash {/path/to/00wrapper.sh} --working-dir {/path/output} --input {path/to/biopython_pipeline/sample_data/input_file_mini} --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae --no-wget --reads-dir {path/to/biopython_pipeline/sample_data}`
 
 Example: `bash ~/biopython_pipeline/scripts/00wrapper.sh --working-dir ~/ --input ~/biopython_pipeline/sample_data/input_file_mini --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae --no-wget --reads-dir ~/biopython_pipeline/sample_data`
 
