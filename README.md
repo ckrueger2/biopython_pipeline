@@ -24,20 +24,26 @@
 5.  K-mer size to use in SPAdes assembly must be specified with `--kmer-size`
 6. The organism to align assembly with blast+ must be specified with `--organism`
 
+The following must be installed prior to pipeline running: Biopython, Kallisto, Sleuth, Bowtie2, SPAdes, Blast, and Argparse
+
 *Unix Code with NCBI search:*
 
 `bash {/path/to/00wrapper.sh} --working-dir {/path/to/output} --input {/path/to/input_file} --accession {ncbi_accession#} --kmer-size {#} --organism {organism_name}`
 
-*Unix Code with NCBI search:*
+Example: `bash ~/biopython_pipeline/scripts/00wrapper.sh --working-dir ~/ --input ~/input_file --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae`
+
+*Unix Code with pre-existing fastq files:*
 
 `bash {/path/to/00wrapper.sh} --working-dir {/path/output} --input {/path/input_file} --accession {ncbi_accession#} --kmer-size {#} --organism {organism_name} --no-wget --reads-dir {path}`
 
 -> An output file - `/path/to/output/pipelineproject_claudia_krueger/PipelineProject.log` - will contain output information from the pipeline
 
 #### Sample test data
-A sample data set is included with the GitHub repository to test the pipeline. To run:
+Sample data fastq files are included within the sample_data folder with an output log file to test the pipeline and compare output. To run:
 
 `bash {/path/to/00wrapper.sh} --working-dir {/path/output} --input {path/to/biopython_pipeline/input_file} --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae --no-wget --reads-dir {path/to/biopython_pipeline/sample_data}`
+
+Example: `bash ~/biopython_pipeline/scripts/00wrapper.sh --working-dir ~/ --input ~/biopython_pipeline/sample_data/input_file_mini --accession NC_006273.2 --kmer-size 77 --organism Betaherpesvirinae --no-wget --reads-dir ~/biopython_pipeline/sample_data`
 
 #### Citations
 Test and sample data: Cheng, S., Caviness, K., Buehler, J., Smithey, M., Nikolich-Žugich, J., & Goodrum, F. (2017). Transcriptome-wide characterization of human cytomegalovirus in natural infection and experimental latency. Proceedings of the National Academy of Sciences of the United States of America, 114(49), E10586–E10595. https://doi.org/10.1073/pnas.1710522114
